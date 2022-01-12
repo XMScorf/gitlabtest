@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: service-a-config
+data:
+  config.yaml: |
+    env: {{ .Values.commonSettings.env }}
+    port: {{ .Values.commonSettings.port }}
+    feature_one: true
+    feature_two: false
